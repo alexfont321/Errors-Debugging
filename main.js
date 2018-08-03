@@ -42,9 +42,9 @@ let parkInfo = {};
 
 
 fetch("https://external-data-56670.firebaseio.com/park-info.json")
+.then(result => result.json())
 .then(result => {
-
-    parkInfo = result.json();
+    parkInfo = result;
     return parkInfo
 })
 .then(result => console.log(result));
